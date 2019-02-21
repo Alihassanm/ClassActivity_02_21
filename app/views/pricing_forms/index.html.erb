@@ -14,8 +14,8 @@
   <tbody>
     <% @pricing_forms.each do |pricing_form| %>
       <tr>
-        <td><%= pricing_form.Product %></td>
-        <td><%= pricing_form.Vendor %></td>
+        <td><%= pricing_form.Product.name %></td>
+        <td><%= pricing_form.Vendor.name %></td>
         <td><%= link_to 'Show', pricing_form %></td>
         <td><%= link_to 'Edit', edit_pricing_form_path(pricing_form) %></td>
         <td><%= link_to 'Destroy', pricing_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -2,12 +2,12 @@
 
 <p>
   <strong>Product:</strong>
-  <%= @pricing_form.Product %>
+  <%= @pricing_form.Product.name %>
 </p>
 
 <p>
   <strong>Vendor:</strong>
-  <%= @pricing_form.Vendor %>
+  <%= @pricing_form.Vendor.name %>
 </p>
 
 <%= link_to 'Edit', edit_pricing_form_path(@pricing_form) %> |
