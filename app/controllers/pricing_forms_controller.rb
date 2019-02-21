@@ -69,6 +69,6 @@ class PricingFormsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pricing_form_params
-      params.require(:pricing_form).permit(:Product_id, :Vendor_id)
+      params.require(:pricing_form).permit(:Product_id, :Vendor_id, :price)
     end
 end

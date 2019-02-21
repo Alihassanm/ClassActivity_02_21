@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_21_204622) do
+ActiveRecord::Schema.define(version: 2019_02_21_213555) do
 
   create_table "pricing_forms", force: :cascade do |t|
     t.integer "Product_id"
     t.integer "Vendor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "price"
     t.index ["Product_id"], name: "index_pricing_forms_on_Product_id"
     t.index ["Vendor_id"], name: "index_pricing_forms_on_Vendor_id"
   end
@@ -26,6 +27,8 @@ ActiveRecord::Schema.define(version: 2019_02_21_204622) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+
 
   create_table "vendors", force: :cascade do |t|
     t.string "name"

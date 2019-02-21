@@ -10,5 +10,11 @@
   <%= @pricing_form.Vendor.name %>
 </p>
 
+<p>
+  <strong>Price:</strong>
+  <%= @pricing_form.price%>
+</p>
+
+
 <%= link_to 'Edit', edit_pricing_form_path(@pricing_form) %> |
 <%= link_to 'Back', pricing_forms_path %>
