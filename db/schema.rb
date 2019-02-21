@@ -27,15 +27,6 @@ ActiveRecord::Schema.define(version: 2019_02_21_204622) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "pvs", force: :cascade do |t|
-    t.integer "Product_id"
-    t.integer "Vendor_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["Product_id"], name: "index_pvs_on_Product_id"
-    t.index ["Vendor_id"], name: "index_pvs_on_Vendor_id"
-  end
-
   create_table "vendors", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
