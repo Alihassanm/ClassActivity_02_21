@@ -1,0 +1,27 @@
+<%= form_with(model: pricing_form, local: true) do |form| %>
+  <% if pricing_form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pricing_form.errors.count, "error") %> prohibited this pricing_form from being saved:</h2>
+
+      <ul>
+      <% pricing_form.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Product_id %>
+    <%= form.text_field :Product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Vendor_id %>
+    <%= form.text_field :Vendor_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
